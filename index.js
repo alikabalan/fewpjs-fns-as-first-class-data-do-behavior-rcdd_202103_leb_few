@@ -11,8 +11,8 @@ function handleClick(e) {
 
 /* Write your implementation of greet() */
 function greet(currentTime) {
-  let TimeNow = currentTime.split (':');
-  let hour = parseInt (timeNow[0]);
+  let TimeNow = currentTime.split (":");
+  let hour = parseInt(timeNow, 10);
   if (hour < 12) {
     return "Good Morning";
   } else if (hour > 17) {
@@ -20,6 +20,15 @@ function greet(currentTime) {
   }
   return "Good Afternoon";
 }
+
+function greet(timeStr) {  
+const hour = parseInt(timeStr, 10);  
+if ( hour < 12) return "Good Morning"  
+if ( hour > 17) return "Good Evening"  
+return "Good Afternoon"}
+
+
+
 
 /* Write your implementation of displayMessage() */
 function displayMessage(message) {
